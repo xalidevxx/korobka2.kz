@@ -15,12 +15,17 @@
 				item-props="id"
 				@click:select="select($event.path as [number])"
 			/>
+			<template #append>
+				<div class="pa-4">
+					<AddressButton />
+				</div>
+			</template>
 		</v-navigation-drawer>
 
 		<v-main>
 			<div class="pa-4">
 				<h1 class="mb-8 mt-4 text-h5">{{ section.name }}</h1>
-				<ProductCardGrid />
+				<ProductCardGrid :products="section.data" />
 			</div>
 		</v-main>
 	</v-app>

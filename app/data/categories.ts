@@ -1,10 +1,11 @@
 import type { ICategory } from '~/interfaces/category.interface';
+import { exclusive } from './exclusive';
 
 export const categories: ICategory[] = [
 	{
 		id: 1,
 		name: 'Эксклюзив',
-		data: [],
+		data: exclusive,
 	},
 	{
 		id: 2,
