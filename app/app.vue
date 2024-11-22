@@ -3,7 +3,9 @@
 		<v-app-bar prominent>
 			<v-app-bar-nav-icon variant="text" @click.stop="drawer = !drawer" />
 			<v-spacer />
-			<WhatsAppButton :icon="true" />
+			<div class="pr-2">
+				<WhatsAppButton :icon="true" />
+			</div>
 		</v-app-bar>
 
 		<v-navigation-drawer v-model="drawer" temporary>
