@@ -19,10 +19,15 @@
 				<v-card-text>
 					<Map />
 				</v-card-text>
-
 				<v-card-actions>
 					<v-spacer />
-					<v-btn text="Копировать адрес" @click="copyToClipboard" />
+					<v-btn
+						text="Копировать адрес"
+						variant="text"
+						color="primary"
+						rounded
+						@click="copyToClipboard"
+					/>
 				</v-card-actions>
 			</v-card>
 		</template>
