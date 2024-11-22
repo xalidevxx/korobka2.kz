@@ -51,8 +51,9 @@ const metaTitle =
 	'Картонные коробки купить Алматы, Астана, Шымкент - подарочные, упаковочные - Korobka2.kz';
 const metaDescription =
 	'Картонные подарочные и упаковочные коробки, большие и маленькие, в наличии и на заказ, оптом и в розницу, крафтовые, для шаров, доставка по Казахстану.';
+const metaImage = 'https://korobka2.kz/icons/icon-512.png';
 
-seSeoMeta({
+useSeoMeta({
 	title: metaTitle,
 	ogTitle: metaTitle,
 	description: metaDescription,
