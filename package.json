@@ -2,7 +2,8 @@
 	"name": "korobka2.kz",
 	"description": "Интернет магазин подарочных коробок",
 	"author": "Alikhan <xalidevxx@gmail.com>",
-	"version": "1.0.1",
+	"homepage": "https://korobka2.kz/",
+	"version": "1.0.2",
 	"private": true,
 	"type": "module",
 	"scripts": {
