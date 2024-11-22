@@ -48,17 +48,21 @@ import { categories } from './data/categories';
 import type { ICategory } from './interfaces/category.interface';
 
 const metaTitle =
-	'Картонные коробки купить Алматы - подарочные, упаковочные - Korobka2.kz';
+	'Картонные коробки купить Алматы, Астана, Шымкент - подарочные, упаковочные - Korobka2.kz';
 const metaDescription =
 	'Картонные подарочные и упаковочные коробки, большие и маленькие, в наличии и на заказ, оптом и в розницу, крафтовые, для шаров, доставка по Казахстану.';
 
-useSeoMeta({
+seSeoMeta({
 	title: metaTitle,
 	ogTitle: metaTitle,
 	description: metaDescription,
 	ogDescription: metaDescription,
-	ogImage: 'https://korobka2.kz/icons/icon-512.png',
-	twitterCard: 'https://korobka2.kz/icons/icon-512.png',
+	ogImage: metaImage,
+	twitterCard: metaImage,
+	keywords:
+		'коробки, картонные коробки, подарочные коробки, упаковочные коробки, Алматы, Алматы, Шымкент, Казахстан',
+	ogType: 'website',
+	ogUrl: 'https://korobka2.kz',
 });
 
 const theme = useTheme();
