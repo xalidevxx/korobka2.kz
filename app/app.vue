@@ -39,6 +39,23 @@
 				<ProductCardGrid :products="section.data" />
 			</div>
 		</v-main>
+
+		<v-bottom-sheet v-model="sheet" inset>
+			<v-card align="center">
+				<v-card-title>
+					У нас более
+					<span style="color: red; text-decoration: underline"> 1 млн+ </span>
+					коробок 😱🤩
+				</v-card-title>
+				<v-card-text>
+					Напишите нам. Мы найдем для вас коробку под ваши нужды и по самым
+					низким ценам👇
+				</v-card-text>
+				<v-card-actions>
+					<WhatsAppButton />
+				</v-card-actions>
+			</v-card>
+		</v-bottom-sheet>
 	</v-app>
 </template>
 
@@ -73,6 +90,7 @@ const router = useRouter();
 const route = useRoute();
 
 const drawer = ref<boolean>(false);
+const sheet = ref<boolean>(true);
 const darkTheme = ref<boolean>(theme.global.current.value.dark);
 const menu = ref<ICategory[]>(categories);
 const queryParams = route.query['search'];
