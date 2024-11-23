@@ -103,6 +103,7 @@ const section = ref<ICategory>(categories[index] as ICategory);
 const select = (v: [number]) => {
 	selected.value = v;
 	drawer.value = false;
+	window.scrollTo(0, 0);
 };
 
 watch(selected, (c: [number]) => {
