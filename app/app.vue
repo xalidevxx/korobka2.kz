@@ -47,6 +47,7 @@ import { ref } from 'vue';
 import { useTheme } from 'vuetify';
 import { categories } from './data/categories';
 import type { ICategory } from './interfaces/category.interface';
+import { useRouter, useRoute } from '#app';
 
 const metaTitle =
 	'Картонные коробки купить Алматы, Астана, Шымкент - подарочные, упаковочные - Korobka2.kz';
@@ -68,11 +69,18 @@ useSeoMeta({
 });
 
 const theme = useTheme();
+const router = useRouter();
+const route = useRoute();
+
 const drawer = ref<boolean>(false);
 const darkTheme = ref<boolean>(theme.global.current.value.dark);
 const menu = ref<ICategory[]>(categories);
-const selected = ref<[number]>([(categories[0] as ICategory).id]);
-const section = ref<ICategory>(categories[0] as ICategory);
+const queryParams = route.query['search'];
+const index = queryParams
+	? categories.findIndex(c => c.metaTitle === queryParams)
+	: 0;
+const selected = ref<[number]>([(categories[index] as ICategory).id]);
+const section = ref<ICategory>(categories[index] as ICategory);
 
 const select = (v: [number]) => {
 	selected.value = v;
@@ -81,7 +89,6 @@ const select = (v: [number]) => {
 
 watch(selected, (c: [number]) => {
 	section.value = categories[c[0] - 1] as ICategory;
-
 	useHead({
 		title: section.value.metaTitle,
 		meta: [
@@ -90,6 +97,12 @@ watch(selected, (c: [number]) => {
 			{ property: 'og:description', content: section.value.metaDescription },
 			{ name: 'keywords', content: section.value.metaKeywords },
 		],
+	});
+	router.push({
+		path: '/',
+		query: {
+			search: section.value.metaTitle,
+		},
 	});
 });
 
