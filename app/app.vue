@@ -28,8 +28,7 @@
 				<v-divider />
 				<div class="pa-4">
 					<InstaButton />
-					<WhatsAppButton class="my-4" />
-					<AddressButton />
+					<WhatsAppButton class="mt-4" />
 				</div>
 			</template>
 		</v-navigation-drawer>
@@ -82,6 +81,16 @@ const select = (v: [number]) => {
 
 watch(selected, (c: [number]) => {
 	section.value = categories[c[0] - 1] as ICategory;
+
+	useHead({
+		title: section.value.metaTitle,
+		meta: [
+			{ property: 'og:title', content: section.value.metaTitle },
+			{ name: 'description', content: section.value.metaDescription },
+			{ property: 'og:description', content: section.value.metaDescription },
+			{ name: 'keywords', content: section.value.metaKeywords },
+		],
+	});
 });
 
 watch(darkTheme, v => {
