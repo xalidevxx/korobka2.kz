@@ -3,7 +3,7 @@
 	"description": "Интернет магазин подарочных коробок",
 	"author": "Alikhan <xalidevxx@gmail.com>",
 	"homepage": "https://korobka2.kz/",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"private": true,
 	"type": "module",
 	"scripts": {

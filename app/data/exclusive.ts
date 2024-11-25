@@ -2,6 +2,12 @@ import type { IProduct } from '~/interfaces/product.interface';
 
 export const exclusive: IProduct[] = [
 	{
+		img: '/exclusive/8.jpg',
+		name: 'Капсула для клубники в шоколаде',
+		description:
+			'Идеальный размер для клубники в шоколаде: 8 см. Стоимость за 1 рулон (1000 шт): 1000 тг, от 10 штук: 800 тг.',
+	},
+	{
 		img: '/exclusive/1.jpeg',
 		name: 'Розовое сердце 🩷',
 		description:

@@ -1,5 +1,14 @@
 <template>
 	<v-btn
+		v-if="icon"
+		href="https://wa.me/77081112293"
+		target="_blank"
+		class="instagram text-white"
+		icon="mdi-instagram"
+		density="comfortable"
+	/>
+	<v-btn
+		v-else
 		href="https://www.instagram.com/korobka_kz2/"
 		target="_blank"
 		rounded
@@ -10,6 +19,12 @@
 		@korobka_kz2
 	</v-btn>
 </template>
+
+<script setup lang="ts">
+const { icon } = defineProps<{
+	icon?: boolean;
+}>();
+</script>
 
 <style scoped lang="scss">
 .instagram {
