@@ -1,7 +1,7 @@
 <template>
 	<v-btn
 		v-if="icon"
-		href="https://wa.me/77081112293"
+		href="https://www.instagram.com/korobka_kz2/"
 		target="_blank"
 		class="instagram text-white"
 		icon="mdi-instagram"
