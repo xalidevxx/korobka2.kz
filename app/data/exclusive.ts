@@ -2,6 +2,12 @@ import type { IProduct } from '~/interfaces/product.interface';
 
 export const exclusive: IProduct[] = [
 	{
+		img: '/window_box/5.avif',
+		name: 'Коробка с окном',
+		description:
+			'Размер: 230*170*50 мм. Конструкция: дно + крышка с окошком и прозрачной пленкой. Материал: микрогофрокартон 2 мм. Цвет: белый. Цены: 1-9 шт: 820 тг, 10-49 шт: 665 тг, 50-499 шт: 605 тг, 500-1000 шт: 530 тг.',
+	},
+	{
 		img: '/exclusive/8.jpg',
 		name: 'Капсула для клубники в шоколаде',
 		description:

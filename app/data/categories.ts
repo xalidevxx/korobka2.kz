@@ -1,8 +1,9 @@
 import type { ICategory } from '~/interfaces/category.interface';
+import { balloons } from './balloons';
 import { exclusive } from './exclusive';
 import { newYear } from './new_year';
 import { solid } from './solid';
-import { balloons } from './balloons';
+import { windowBox } from './window_box';
 
 export const categories: ICategory[] = [
 	{
@@ -48,5 +49,16 @@ export const categories: ICategory[] = [
 			'Коробки для шаров из картона для безопасной транспортировки и хранения. Идеальны для праздников, корпоративов и событий. Доставка по Казахстану. Оптовая и розничная продажа.',
 		metaKeywords:
 			'коробки для шаров, упаковка для шариков, картонные коробки, упаковка для праздников, декор для мероприятий, Алматы, Казахстан',
+	},
+	{
+		id: 5,
+		name: 'Коробки с окошками',
+		data: windowBox,
+		metaTitle:
+			'Коробки с окошками для клубники в шоколаде | Упаковка от Korobka2.kz',
+		metaDescription:
+			'Коробки с окошками для клубники в шоколаде и других сладостей. Идеальны для подарков и презентаций. Высокое качество, доставка по Казахстану. Заказывайте оптом и в розницу на Korobka2.kz.',
+		metaKeywords:
+			'коробки с окошками, упаковка для клубники в шоколаде, подарочные коробки, картонные коробки, упаковка для сладостей, подарочная упаковка, Алматы, Казахстан',
 	},
 ];
