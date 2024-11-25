@@ -49,8 +49,7 @@
 					коробок 😱🤩
 				</v-card-title>
 				<v-card-text>
-					Напишите нам. Мы найдем для вас коробку под ваши нужды и по самым
-					низким ценам👇
+					Напишите нам. Мы найдем для вас и по самым низким ценам👇
 				</v-card-text>
 				<v-card-actions>
 					<WhatsAppButton />
@@ -61,11 +60,11 @@
 </template>
 
 <script setup lang="ts">
+import { useRoute, useRouter } from '#app';
 import { ref } from 'vue';
 import { useTheme } from 'vuetify';
 import { categories } from './data/categories';
 import type { ICategory } from './interfaces/category.interface';
-import { useRouter, useRoute } from '#app';
 
 const metaTitle =
 	'Картонные коробки купить Алматы, Астана, Шымкент - подарочные, упаковочные - Korobka2.kz';
